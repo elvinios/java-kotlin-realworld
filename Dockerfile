@@ -1,6 +1,6 @@
 FROM maven:3.8.6-jdk-11-slim as build
 
-COPY kotlin-spring-realworld-example-app /home/kotlin-spring-realworld-example-app
+COPY . /home/kotlin-spring-realworld-example-app
 
 RUN mvn -f /home/kotlin-spring-realworld-example-app/pom.xml clean package
 
