@@ -4,7 +4,7 @@ COPY . /home/kotlin-spring-realworld-example-app
 
 RUN mvn -f /home/kotlin-spring-realworld-example-app/pom.xml clean package
 
-RUN mv /home/kotlin-spring-realworld-example-app/target/api-0.0.1-SNAPSHOT.jar /kotlin/
+RUN mv /home/kotlin-spring-realworld-example-app/target/api-0.0.1-SNAPSHOT.jar /kotlin/api-0.0.1-SNAPSHOT.jar
 
 
 
