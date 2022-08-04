@@ -4,13 +4,13 @@ COPY . /home/kotlin-spring-realworld-example-app
 
 RUN mvn -f /home/kotlin-spring-realworld-example-app/pom.xml clean package
 
-RUN mv /home/kotlin-spring-realworld-example-app/target/api-0.0.1-SNAPSHOT.jar /kotlin/api-0.0.1-SNAPSHOT.jar
+RUN mv /home/kotlin-spring-realworld-example-app/target/api-0.0.1-SNAPSHOT.jar /kaniko/
 
 
 
 FROM openjdk:11-jre-slim as serve
 
-COPY --from=build /kotlin/api-0.0.1-SNAPSHOT.jar /usr/local/lib/api.jar
+COPY --from=build /kaniko/api-0.0.1-SNAPSHOT.jar /usr/local/lib/api.jar
 
 CMD ["java","-jar","/usr/local/lib/api.jar"]
 
