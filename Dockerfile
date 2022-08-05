@@ -7,6 +7,7 @@ RUN mvn -f /home/kotlin-spring-realworld-example-app/pom.xml clean package
 RUN mv /home/kotlin-spring-realworld-example-app/target/api-0.0.1-SNAPSHOT.jar /kaniko/
 
 
+#
 
 FROM openjdk:11-jre-slim as serve
 
